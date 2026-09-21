@@ -2,12 +2,12 @@
 2020.2
 Jun 16 2026
 11:10:11
-C:/Users/maitr/Downloads/basicBuildingBlocksVhdl/basicBuildingBlocksVhdl/basicBuildingBlocksVhdl_package.vhd,1788818146,vhdl,C:/Users/maitr/Downloads/enhancedPwm.vhd,,,basicbuildingblocks_package,,,,,,,,
-C:/Users/maitr/Downloads/basicBuildingBlocksVhdl/basicBuildingBlocksVhdl/decoder3x8.vhd,1788818146,vhdl,,,,decode3x8,,,,,,,,
-C:/Users/maitr/Downloads/basicBuildingBlocksVhdl/basicBuildingBlocksVhdl/genericComparator.vhd,1788818146,vhdl,,,,genericcompare,,,,,,,,
-C:/Users/maitr/Downloads/basicBuildingBlocksVhdl/basicBuildingBlocksVhdl/genericCounter.vhd,1788818146,vhdl,,,,genericcounter,,,,,,,,
-C:/Users/maitr/Downloads/basicBuildingBlocksVhdl/basicBuildingBlocksVhdl/genericMux8x1.vhd,1788818146,vhdl,,,,genericmux8x1,,,,,,,,
-C:/Users/maitr/Downloads/basicBuildingBlocksVhdl/basicBuildingBlocksVhdl/genericRegister.vhd,1788818146,vhdl,,,,genericregister,,,,,,,,
-C:/Users/maitr/Downloads/basicBuildingBlocksVhdl/basicBuildingBlocksVhdl/regFile8x16.vhd,1788818146,vhdl,,,,generic8registerfile,,,,,,,,
-C:/Users/maitr/Downloads/enhancedPwm.vhd,1788889767,vhdl,,,,enhancedpwm,,,,,,,,
-C:/Users/maitr/Downloads/enhancedPwm_tb.vhd,1788818269,vhdl,,,,enhancedpwm_tb,,,,,,,,
+C:/Users/maitr/Documents/EENG484/basicBuildingBlocksVhdl_package.vhd,1788818146,vhdl,C:/Users/maitr/Documents/EENG484/enhancedPwm.vhd,,,basicbuildingblocks_package,,,,,,,,
+C:/Users/maitr/Documents/EENG484/decoder3x8.vhd,1788818146,vhdl,,,,decode3x8,,,,,,,,
+C:/Users/maitr/Documents/EENG484/genericComparator.vhd,1788818146,vhdl,,,,genericcompare,,,,,,,,
+C:/Users/maitr/Documents/EENG484/genericCounter.vhd,1788818146,vhdl,,,,genericcounter,,,,,,,,
+C:/Users/maitr/Documents/EENG484/genericMux8x1.vhd,1788818146,vhdl,,,,genericmux8x1,,,,,,,,
+C:/Users/maitr/Documents/EENG484/genericRegister.vhd,1788818146,vhdl,,,,genericregister,,,,,,,,
+C:/Users/maitr/Documents/EENG484/regFile8x16.vhd,1788818146,vhdl,,,,generic8registerfile,,,,,,,,
+C:/Users/maitr/Documents/EENG484/enhancedPwm.vhd,1788889767,vhdl,,,,enhancedpwm,,,,,,,,
+C:/Users/maitr/Documents/EENG484/enhancedPwm_tb.vhd,1788818269,vhdl,,,,enhancedpwm_tb,,,,,,,,

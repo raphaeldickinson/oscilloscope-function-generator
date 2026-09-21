@@ -72,11 +72,11 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  C:/Users/maitr/Downloads/basicBuildingBlocksVhdl/basicBuildingBlocksVhdl/basicBuildingBlocksVhdl_package.vhd
-  C:/Users/maitr/Downloads/basicBuildingBlocksVhdl/basicBuildingBlocksVhdl/decoder3x8.vhd
-  C:/Users/maitr/Downloads/basicBuildingBlocksVhdl/basicBuildingBlocksVhdl/genericMux8x1.vhd
-  C:/Users/maitr/Downloads/basicBuildingBlocksVhdl/basicBuildingBlocksVhdl/genericRegister.vhd
-  C:/Users/maitr/Downloads/basicBuildingBlocksVhdl/basicBuildingBlocksVhdl/regFile8x16.vhd
+  C:/Users/maitr/Documents/EENG484/basicBuildingBlocksVhdl_package.vhd
+  C:/Users/maitr/Documents/EENG484/decoder3x8.vhd
+  C:/Users/maitr/Documents/EENG484/genericMux8x1.vhd
+  C:/Users/maitr/Documents/EENG484/genericRegister.vhd
+  C:/Users/maitr/Documents/EENG484/regFile8x16.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

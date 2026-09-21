@@ -1,0 +1,23 @@
+Vivado Simulator v2026.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2026.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot enhancedPwm_tb_behav xil_defaultlib.enhancedPwm_tb -log elaborate.log 
+INFO: [XSIM 43-3493] Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xil_defaultlib.basicbuildingblocks_package
+Compiling architecture behavior of entity xil_defaultlib.genericCounter [\genericCounter(n=8)\]
+Compiling architecture behavior of entity xil_defaultlib.genericCompare [\genericCompare(n=8)\]
+Compiling architecture behavior of entity xil_defaultlib.genericRegister [\genericRegister(n=9)\]
+Compiling architecture behavior of entity xil_defaultlib.genericCompare [\genericCompare(n=9)\]
+Compiling architecture structure of entity xil_defaultlib.enhancedPwm [enhancedpwm_default]
+Compiling architecture behavioral of entity xil_defaultlib.enhancedpwm_tb
+Built simulation snapshot enhancedPwm_tb_behav

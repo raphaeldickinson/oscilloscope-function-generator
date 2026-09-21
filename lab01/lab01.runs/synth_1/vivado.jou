@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Mon Sep  7 23:19:35 2026
+# Process ID         : 7012
+# Current directory  : C:/Users/maitr/Documents/EENG484/lab01/lab01.runs/synth_1
+# Command line       : vivado.exe -log generic8RegisterFile.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source generic8RegisterFile.tcl
+# Log file           : C:/Users/maitr/Documents/EENG484/lab01/lab01.runs/synth_1/generic8RegisterFile.vds
+# Journal file       : C:/Users/maitr/Documents/EENG484/lab01/lab01.runs/synth_1\vivado.jou
+# Running On         : R-Zenbook
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 285H
+# CPU Frequency      : 3686 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 16
+# Host memory        : 33685 MB
+# Swap memory        : 3892 MB
+# Total Virtual      : 37577 MB
+# Available Virtual  : 19700 MB
+#-----------------------------------------------------------
+source generic8RegisterFile.tcl -notrace

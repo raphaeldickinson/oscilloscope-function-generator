@@ -1,0 +1,11 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../../Downloads/basicBuildingBlocksVhdl/basicBuildingBlocksVhdl/basicBuildingBlocksVhdl_package.vhd" \
+"../../../../../../../Downloads/enhancedPwm.vhd" \
+"../../../../../../../Downloads/basicBuildingBlocksVhdl/basicBuildingBlocksVhdl/genericComparator.vhd" \
+"../../../../../../../Downloads/basicBuildingBlocksVhdl/basicBuildingBlocksVhdl/genericCounter.vhd" \
+"../../../../../../../Downloads/basicBuildingBlocksVhdl/basicBuildingBlocksVhdl/genericRegister.vhd" \
+"../../../../../../../Downloads/enhancedPwm_tb.vhd" \
+
+# Do not sort compile order
+nosort

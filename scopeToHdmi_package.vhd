@@ -42,19 +42,19 @@ package scopeToHdmi_package is
     constant H_BP : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := std_logic_vector(to_unsigned(220, VIDEO_WIDTH_IN_BITS));
     constant H_TOTAL : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := H_ACTIVE + H_FP + H_SYNC + H_BP;
 
-    constant V_ACTIVE : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := std_logic_vector(to_unsigned(719, VIDEO_WIDTH_IN_BITS));
+    constant V_ACTIVE : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := std_logic_vector(to_unsigned(720, VIDEO_WIDTH_IN_BITS));
     constant V_FP : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := std_logic_vector(to_unsigned(5, VIDEO_WIDTH_IN_BITS));
     constant V_SYNC : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := std_logic_vector(to_unsigned(5, VIDEO_WIDTH_IN_BITS));
-    constant V_BP	
-    constant V_TOTAL 
+    constant V_BP :  STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := std_logic_vector(to_unsigned(20, VIDEO_WIDTH_IN_BITS));
+    constant V_TOTAL : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := V_ACTIVE + V_FP + V_SYNC + V_BP;
         
-    constant L_EDGE 
-    constant R_EDGE 
-    constant WIDTH 
+    constant L_EDGE : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := std_logic_vector(to_unsigned(100, VIDEO_WIDTH_IN_BITS));
+    constant R_EDGE : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := std_logic_vector(to_unsigned(600, VIDEO_WIDTH_IN_BITS));
+    constant WIDTH : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := R_EDGE - L_EDGE;
 
-    constant T_EDGE 
-    constant B_EDGE 
-    constant HEIGHT 
+    constant T_EDGE : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := std_logic_vector(to_unsigned(100, VIDEO_WIDTH_IN_BITS));
+    constant B_EDGE : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := std_logic_vector(to_unsigned(720, VIDEO_WIDTH_IN_BITS));
+    constant HEIGHT : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := B_EDGE - T_EDGE;
 	
     -- This is actually half of the width
     constant BORDER_LINE_WIDTH 

@@ -57,7 +57,7 @@ package scopeToHdmi_package is
     constant HEIGHT : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := B_EDGE - T_EDGE;
 	
     -- This is actually half of the width
-    constant BORDER_LINE_WIDTH 
+    constant BORDER_LINE_WIDTH : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := std_logic_vector(to_unsigned(3, VIDEO_WIDTH_IN_BITS));
 
 	-- RGB color values
     constant BORDER_R : STD_LOGIC_VECTOR(7 downto 0) := X"FF";
@@ -92,7 +92,19 @@ component videoSignalGenerator is
 end component;
 
 component scopeFace is
-    PORT ( 	);
+    PORT ( clk: in  STD_LOGIC;
+         resetn : in  STD_LOGIC;
+         pixelHorz : in  STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS - 1 downto 0);
+         pixelVert : in  STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS - 1 downto 0);
+         triggerVolt: in STD_LOGIC_VECTOR (VIDEO_WIDTH_IN_BITS - 1 downto 0);
+         triggerTime: in STD_LOGIC_VECTOR (VIDEO_WIDTH_IN_BITS - 1 downto 0);
+         red : out  STD_LOGIC_VECTOR(7 downto 0);
+         green : out  STD_LOGIC_VECTOR(7 downto 0);
+         blue : out  STD_LOGIC_VECTOR(7 downto 0);
+         ch1: in STD_LOGIC;
+         ch1Enb: in STD_LOGIC;
+         ch2: in STD_LOGIC;
+         ch2Enb: in STD_LOGIC);
 end component;
 
 component clk_wiz_0 is
@@ -128,10 +140,16 @@ component hdmi_tx_0 is
 end component;
 
 component scopeToHdmi is
-    PORT ( );
+    PORT ( sysClk : in  STD_LOGIC;
+         resetn : in  STD_LOGIC;
+         btn: in STD_LOGIC_VECTOR(2 downto 0);
+         tmdsDataP : out  STD_LOGIC_VECTOR (2 downto 0);
+         tmdsDataN : out  STD_LOGIC_VECTOR (2 downto 0);
+         tmdsClkP : out STD_LOGIC;
+         tmdsClkN : out STD_LOGIC;
+         hdmiOen:    out STD_LOGIC);
 end component;
      
         	
 end package;
-
 

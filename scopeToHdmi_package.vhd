@@ -64,21 +64,21 @@ package scopeToHdmi_package is
     constant BORDER_G : STD_LOGIC_VECTOR(7 downto 0) := X"FF";
     constant BORDER_B : STD_LOGIC_VECTOR(7 downto 0) := X"FF";
 
-    constant GRID_R 
-    constant GRID_G 
-    constant GRID_B 
+    constant GRID_R : STD_LOGIC_VECTOR(7 downto 0) := X"88";
+    constant GRID_G : STD_LOGIC_VECTOR(7 downto 0) := X"88";
+    constant GRID_B : STD_LOGIC_VECTOR(7 downto 0) := X"88";
 
-    constant CH1_R 
-    constant CH1_G
-    constant CH1_B 
+    constant CH1_R : STD_LOGIC_VECTOR(7 downto 0) := X"FF";
+    constant CH1_G : STD_LOGIC_VECTOR(7 downto 0) := X"FF";
+    constant CH1_B : STD_LOGIC_VECTOR(7 downto 0) := X"00";
 
-    constant CH2_R
-    constant CH2_G
-    constant CH2_B
+    constant CH2_R : STD_LOGIC_VECTOR(7 downto 0) := X"00";
+    constant CH2_G : STD_LOGIC_VECTOR(7 downto 0) := X"FF";
+    constant CH2_B : STD_LOGIC_VECTOR(7 downto 0) := X"00";
 
-    constant TRIGGER_R 
-    constant TRIGGER_G 
-    constant TRIGGER_B 
+    constant TRIGGER_R : STD_LOGIC_VECTOR(7 downto 0) := X"FF";
+    constant TRIGGER_G : STD_LOGIC_VECTOR(7 downto 0) := X"FF";
+    constant TRIGGER_B : STD_LOGIC_VECTOR(7 downto 0) := X"FF";
 
 
 component videoSignalGenerator is

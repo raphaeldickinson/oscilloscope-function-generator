@@ -59,6 +59,8 @@ package scopeToHdmi_package is
     -- This is actually half of the width
     constant BORDER_LINE_WIDTH : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := std_logic_vector(to_unsigned(3, VIDEO_WIDTH_IN_BITS));
 
+	constant TRIGGER_MARKER_SIZE : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := std_logic_vector(to_unsigned(8, VIDEO_WIDTH_IN_BITS));
+
 	-- RGB color values
     constant BORDER_R : STD_LOGIC_VECTOR(7 downto 0) := X"FF";
     constant BORDER_G : STD_LOGIC_VECTOR(7 downto 0) := X"FF";

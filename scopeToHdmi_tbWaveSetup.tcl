@@ -1,38 +1,46 @@
-#################################################################################
-#Simulator TCL starts in: C:/Users/Chris/AppData/Roaming/Xilinx/Vivado
-# cd C:\Users\Chris\Dropbox\Mycourses\EENG498\VHDL\scopeToHdmi
-# Note, you need to switch the direction of the slash from windows "/" to "\"
-# source scopeToHdmi_tbWaveSetup.tcl
-# Note your signal names will probablly be different, edit to make consistent
-#################################################################################
 restart
 
-# can anyone find a single command to delete all the waves with one command?
-# otherwise you need to manually delete all the waves every
-# time you run a simulation.
+# Delete every wave already in the window with one command
+remove_wave [get_waves *]
 
-add_wave  -color green /scopeToHdmi_tb/clk
-add_wave  -color green /scopeToHdmi_tb/resetn
+# Clocks and reset
+add_wave -color green                  /scopeToHdmi_tb/uut/sysClk
+add_wave -color green                  /scopeToHdmi_tb/uut/videoClk
+add_wave -color green                  /scopeToHdmi_tb/uut/clkLocked
+add_wave -color green                  /scopeToHdmi_tb/uut/resetn
 
-add_wave   -color yellow -radix unsigned /scopeToHdmi_tb/vsg/h_cnt
-add_wave   -color yellow -radix unsigned /scopeToHdmi_tb/vsg/pixelHorz
-add_wave   -color yellow 		/scopeToHdmi_tb/vsg/h_activeArea
-add_wave   -color yellow 		/scopeToHdmi_tb/vsg/hs
+# Horizontal timing (videoSignalGenerator)
+add_wave -color yellow -radix unsigned /scopeToHdmi_tb/uut/vsg/h_cnt
+add_wave -color yellow -radix unsigned /scopeToHdmi_tb/uut/vsg/pixelHorz
+add_wave -color yellow                 /scopeToHdmi_tb/uut/vsg/h_activeArea
+add_wave -color yellow                 /scopeToHdmi_tb/uut/vsg/hs
 
-add_wave   -color orange -radix unsigned /scopeToHdmi_tb/vsg/v_cnt
-add_wave   -color yellow -radix unsigned /scopeToHdmi_tb/vsg/pixelVert
-add_wave   -color orange 		/scopeToHdmi_tb/vsg/v_activeArea
-add_wave   -color orange		/scopeToHdmi_tb/vsg/vs
+# Vertical timing (videoSignalGenerator)
+add_wave -color orange -radix unsigned /scopeToHdmi_tb/uut/vsg/v_cnt
+add_wave -color yellow -radix unsigned /scopeToHdmi_tb/uut/vsg/pixelVert
+add_wave -color orange                 /scopeToHdmi_tb/uut/vsg/v_activeArea
+add_wave -color orange                 /scopeToHdmi_tb/uut/vsg/vs
 
-add_wave   -color aqua	 		/scopeToHdmi_tb/vsg/de
+add_wave -color aqua                   /scopeToHdmi_tb/uut/vsg/de
 
-add_wave   -color red -radix hex	/scopeToHdmi_tb/sf/red
-add_wave   -color green -radix hex	/scopeToHdmi_tb/sf/green
-add_wave   -color blue -radix hex	/scopeToHdmi_tb/sf/blue
+# Pixel color (scopeFace)
+add_wave -color red    -radix hex      /scopeToHdmi_tb/uut/sf/red
+add_wave -color green  -radix hex      /scopeToHdmi_tb/uut/sf/green
+add_wave -color blue   -radix hex      /scopeToHdmi_tb/uut/sf/blue
 
+# HDMI outputs (top level ports)
+add_wave -color orange -radix hex      /scopeToHdmi_tb/uut/tmdsDataP
+add_wave -color orange -radix hex      /scopeToHdmi_tb/uut/tmdsDataN
+add_wave -color orange                 /scopeToHdmi_tb/uut/tmdsClkP
+add_wave -color orange                 /scopeToHdmi_tb/uut/tmdsClkN
+add_wave -color orange                 /scopeToHdmi_tb/uut/hdmiOen
 
+# Optional extras for debugging (uncomment to add)
+# add_wave -color purple                 /scopeToHdmi_tb/uut/videoResetn
+# add_wave -color purple -radix unsigned /scopeToHdmi_tb/uut/triggerVolt
+# add_wave -color purple -radix unsigned /scopeToHdmi_tb/uut/triggerTime
 
-
-
-
-
+# 3 ms covers every reference screenshot (10 us, 11.5 us, 32.5 us, 700 us, 3 ms).
+# The HDMI serializer models make this take a few minutes; lower it to
+# "run 50 us" for the horizontal-timing screenshots only.
+run 3 ms

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1792567454">
+  <File Type="PA-TCL" Name="signalAcquire.tcl"/>
+  <File Type="REPORTS-TCL" Name="signalAcquire_reports.tcl"/>
+  <File Type="INIT-TIMING" Name="signalAcquire_timing_summary_init.rpt"/>
+  <File Type="OPT-DCP" Name="signalAcquire_opt.dcp"/>
+  <File Type="OPT-DRC" Name="signalAcquire_drc_opted.rpt"/>
+  <File Type="OPT-UTIL" Name="signalAcquire_utilization_opted.rpt"/>
+  <File Type="OPT-UTIL-PB" Name="signalAcquire_utilization_opted.pb"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="signalAcquire_methodology_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="signalAcquire.hwdef"/>
+  <File Type="OPT-TIMING" Name="signalAcquire_timing_summary_opted.rpt"/>
+  <File Type="OPT-RQA-PB" Name="signalAcquire_rqa_opted.pb"/>
+  <File Type="PWROPT-DCP" Name="signalAcquire_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="signalAcquire_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="signalAcquire_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="signalAcquire_placed.dcp"/>
+  <File Type="PLACE-IO" Name="signalAcquire_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="signalAcquire_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="signalAcquire_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="signalAcquire_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="signalAcquire_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="signalAcquire_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="signalAcquire_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="signalAcquire_timing_summary_placed.rpt"/>
+  <File Type="PLACE-RQA-PB" Name="signalAcquire_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="signalAcquire_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="signalAcquire_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="signalAcquire_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="signalAcquire_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="signalAcquire_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="signalAcquire_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="signalAcquire_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="signalAcquire_routed_bb.dcp"/>
+  <File Type="ROUTE-UTIL" Name="signalAcquire_utilization_routed.rpt"/>
+  <File Type="ROUTE-UTIL-PB" Name="signalAcquire_utilization_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="signalAcquire_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="signalAcquire_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="signalAcquire_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="signalAcquire_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="signalAcquire_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="signalAcquire_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="signalAcquire_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="signalAcquire_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="signalAcquire_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="signalAcquire_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="signalAcquire_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="signalAcquire_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="signalAcquire_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="signalAcquire_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="signalAcquire_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="signalAcquire_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="signalAcquire_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="signalAcquire_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="signalAcquire_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-RQS-PB" Name="signalAcquire_rqs_routed.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="signalAcquire_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="signalAcquire_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="signalAcquire_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="signalAcquire_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="signalAcquire_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="signalAcquire_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="signalAcquire_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="signalAcquire_bus_skew_postroute_physopted.rpx"/>
+  <File Type="NOC_TRAFFIC_SPEC_FILE" Name="signalAcquire.nts"/>
+  <File Type="NOC_SOLUTION_FILE" Name="signalAcquire.ncr"/>
+  <File Type="BG-BIT" Name="signalAcquire.bit"/>
+  <File Type="BG-XML" Name="signalAcquire.xml"/>
+  <File Type="BG-WRITE-BITSTREAM-XML" Name="write_bitstream.xml"/>
+  <File Type="BG-BIN" Name="signalAcquire.bin"/>
+  <File Type="BITSTR-MSK" Name="signalAcquire.msk"/>
+  <File Type="BITSTR-RBT" Name="signalAcquire.rbt"/>
+  <File Type="BITSTR-NKY" Name="signalAcquire.nky"/>
+  <File Type="BITSTR-BMM" Name="signalAcquire_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="signalAcquire.mmi"/>
+  <File Type="PDI-FILE" Name="signalAcquire.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="signalAcquire_boot.pdi"/>
+  <File Type="PL-PDI-FILE" Name="signalAcquire_pld.pdi"/>
+  <File Type="RCFI_FILE" Name="signalAcquire.rcfi"/>
+  <File Type="CFI_FILE" Name="signalAcquire.cfi"/>
+  <File Type="RNPI_FILE" Name="signalAcquire.rnpi"/>
+  <File Type="RCDO-FILE" Name="signalAcquire.rcdo"/>
+  <File Type="MARKER-RNPI-FILE" Name="signalAcquire_markers.rnpi"/>
+  <File Type="MARKER-RCDO-FILE" Name="signalAcquire_markers.rcdo"/>
+  <File Type="BOOT_RNPI_FILE" Name="signalAcquire_boot.rnpi"/>
+  <File Type="BOOT_MARKER_RNPI_FILE" Name="signalAcquire_boot_markers.rnpi"/>
+  <File Type="PL_RNPI_FILE" Name="signalAcquire_pld.rnpi"/>
+  <File Type="PL_MARKER_RNPI_FILE" Name="signalAcquire_pld_markers.rnpi"/>
+  <File Type="PL_MASK_RNPI_FILE" Name="signalAcquire_pld_mask.rnpi"/>
+  <File Type="PL_SHUTDOWN_RNPI_FILE" Name="signalAcquire_pld_shutdown.rnpi"/>
+  <File Type="PL_UNMASK_RNPI_FILE" Name="signalAcquire_pld_unmask.rnpi"/>
+  <File Type="PL-RCDO-FILE" Name="signalAcquire_pld.rcdo"/>
+  <File Type="PL-CLEAR-RCDO-FILE" Name="signalAcquire_pld_clear.rcdo"/>
+  <File Type="PL_MARKER_RCDO_FILE" Name="signalAcquire_pld_markers.rcdo"/>
+  <File Type="PL_MASK_RCDO_FILE" Name="signalAcquire_pld_mask.rcdo"/>
+  <File Type="PL_UNMASK_MARKER_RCDO_FILE" Name="signalAcquire_pld_unmask_markers.rcdo"/>
+  <File Type="PL_UNMASK_RCDO_FILE" Name="signalAcquire_pld_unmask.rcdo"/>
+  <File Type="NPI_FILE" Name="signalAcquire.npi"/>
+  <File Type="RBD_FILE" Name="signalAcquire.rbd"/>
+  <File Type="MMI-FILE" Name="signalAcquire.mmi"/>
+  <File Type="BIF-FILE" Name="signalAcquire.bif"/>
+  <File Type="BOOT-BIF-FILE" Name="signalAcquire_boot.bif"/>
+  <File Type="PL-BIF-FILE" Name="signalAcquire_pld.bif"/>
+  <File Type="LTX-FILE" Name="signalAcquire.ltx"/>
+  <File Type="BOOT-LTX-FILE" Name="signalAcquire_boot.ltx"/>
+  <File Type="PL-LTX-FILE" Name="signalAcquire_pld.ltx"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="signalAcquire.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="signalAcquire.sysdef"/>
+  <File Type="BG-BGN" Name="signalAcquire.bgn"/>
+  <File Type="BG-DRC" Name="signalAcquire.drc"/>
+  <File Type="RDI-RDI" Name="signalAcquire.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-RQS" Name="signalAcquire_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="signalAcquire_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../signalAcquire_Package.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../basicBuildingBlocksVhdl_package.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../decoder3x8.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../genericComparator.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../genericCounter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../genericMux8x1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../genericRegister.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../regFile8x16.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../signalAcquireDatapath.vhdl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../signalAcquireFsm.vhdl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../signalAcquire.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../an7606.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../signalAcquire_tb.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../enhancedPwm.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../enhancedPwm_tb.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../flagRegister.vhdl">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../genericAdder.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../genericAdderSubtractor.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../genericMux2x1.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../genericMux4x1.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../scopeToHdmi_package.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../scopeFace.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../scopeToHdmi.vhdl">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../scopeToHdmi_tb.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../videoSignalGenerator.vhdl">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="signalAcquire"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../signalAcquire.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2026">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

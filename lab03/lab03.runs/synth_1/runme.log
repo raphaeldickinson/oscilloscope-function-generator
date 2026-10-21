@@ -1,0 +1,371 @@
+
+*** Running vivado
+    with args -log signalAcquire.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source signalAcquire.tcl
+
+
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 04-sep-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Wed Oct 21 01:24:15 2026
+# Process ID         : 23360
+# Current directory  : C:/Users/maitr/Documents/EENG484/lab03/lab03.runs/synth_1
+# Command line       : vivado.exe -log signalAcquire.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source signalAcquire.tcl
+# Log file           : C:/Users/maitr/Documents/EENG484/lab03/lab03.runs/synth_1/signalAcquire.vds
+# Journal file       : C:/Users/maitr/Documents/EENG484/lab03/lab03.runs/synth_1\vivado.jou
+# Running On         : R-Zenbook
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 285H
+# CPU Frequency      : 3686 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 16
+# Host memory        : 33685 MB
+# Swap memory        : 3355 MB
+# Total Virtual      : 37041 MB
+# Available Virtual  : 13782 MB
+#-----------------------------------------------------------
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Wed Oct 21 01:24:15 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source signalAcquire.tcl -notrace
+Command: synth_design -top signalAcquire -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Vivado_Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Designutils 20-5008] Incremental synthesis strategy default
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9044
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1394.891 ; gain = 577.379
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'signalAcquire' [C:/Users/maitr/Documents/EENG484/signalAcquire.vhd:19]
+INFO: [Synth 8-3491] module 'signalAcquire_Datapath' declared at 'C:/Users/maitr/Documents/EENG484/signalAcquireDatapath.vhdl:6' bound to instance 'datapath_inst' of component 'signalAcquire_Datapath' [C:/Users/maitr/Documents/EENG484/signalAcquire.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'signalAcquire_Datapath' [C:/Users/maitr/Documents/EENG484/signalAcquireDatapath.vhdl:16]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'genericCounter' declared at 'C:/Users/maitr/Documents/EENG484/genericCounter.vhd:15' bound to instance 'shortDelayCounter_inst' of component 'genericCounter' [C:/Users/maitr/Documents/EENG484/signalAcquireDatapath.vhdl:33]
+INFO: [Synth 8-638] synthesizing module 'genericCounter' [C:/Users/maitr/Documents/EENG484/genericCounter.vhd:23]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'genericCounter' (0#1) [C:/Users/maitr/Documents/EENG484/genericCounter.vhd:23]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'genericCompare' declared at 'C:/Users/maitr/Documents/EENG484/genericComparator.vhd:10' bound to instance 'shortDelayCompare_inst' of component 'genericCompare' [C:/Users/maitr/Documents/EENG484/signalAcquireDatapath.vhdl:41]
+INFO: [Synth 8-638] synthesizing module 'genericCompare' [C:/Users/maitr/Documents/EENG484/genericComparator.vhd:16]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'genericCompare' (0#1) [C:/Users/maitr/Documents/EENG484/genericComparator.vhd:16]
+	Parameter N bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'genericCounter' declared at 'C:/Users/maitr/Documents/EENG484/genericCounter.vhd:15' bound to instance 'longDelayCounter_inst' of component 'genericCounter' [C:/Users/maitr/Documents/EENG484/signalAcquireDatapath.vhdl:53]
+INFO: [Synth 8-638] synthesizing module 'genericCounter__parameterized1' [C:/Users/maitr/Documents/EENG484/genericCounter.vhd:23]
+	Parameter N bound to: 24 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'genericCounter__parameterized1' (0#1) [C:/Users/maitr/Documents/EENG484/genericCounter.vhd:23]
+	Parameter N bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'genericCompare' declared at 'C:/Users/maitr/Documents/EENG484/genericComparator.vhd:10' bound to instance 'longDelayCompare_inst' of component 'genericCompare' [C:/Users/maitr/Documents/EENG484/signalAcquireDatapath.vhdl:61]
+INFO: [Synth 8-638] synthesizing module 'genericCompare__parameterized1' [C:/Users/maitr/Documents/EENG484/genericComparator.vhd:16]
+	Parameter N bound to: 24 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'genericCompare__parameterized1' (0#1) [C:/Users/maitr/Documents/EENG484/genericComparator.vhd:16]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'genericCounter' declared at 'C:/Users/maitr/Documents/EENG484/genericCounter.vhd:15' bound to instance 'regCounter_inst' of component 'genericCounter' [C:/Users/maitr/Documents/EENG484/signalAcquireDatapath.vhdl:74]
+INFO: [Synth 8-638] synthesizing module 'genericCounter__parameterized3' [C:/Users/maitr/Documents/EENG484/genericCounter.vhd:23]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'genericCounter__parameterized3' (0#1) [C:/Users/maitr/Documents/EENG484/genericCounter.vhd:23]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'genericCompare' declared at 'C:/Users/maitr/Documents/EENG484/genericComparator.vhd:10' bound to instance 'regCompare_inst' of component 'genericCompare' [C:/Users/maitr/Documents/EENG484/signalAcquireDatapath.vhdl:82]
+INFO: [Synth 8-638] synthesizing module 'genericCompare__parameterized3' [C:/Users/maitr/Documents/EENG484/genericComparator.vhd:16]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'genericCompare__parameterized3' (0#1) [C:/Users/maitr/Documents/EENG484/genericComparator.vhd:16]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'generic8RegisterFile' declared at 'C:/Users/maitr/Documents/EENG484/regFile8x16.vhd:13' bound to instance 'adSamples_inst' of component 'generic8RegisterFile' [C:/Users/maitr/Documents/EENG484/signalAcquireDatapath.vhdl:94]
+INFO: [Synth 8-638] synthesizing module 'generic8RegisterFile' [C:/Users/maitr/Documents/EENG484/regFile8x16.vhd:23]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'decode3x8' declared at 'C:/Users/maitr/Documents/EENG484/decoder3x8.vhd:9' bound to instance 'writeSelect' of component 'decode3x8' [C:/Users/maitr/Documents/EENG484/regFile8x16.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'decode3x8' [C:/Users/maitr/Documents/EENG484/decoder3x8.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'decode3x8' (0#1) [C:/Users/maitr/Documents/EENG484/decoder3x8.vhd:15]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'genericRegister' declared at 'C:/Users/maitr/Documents/EENG484/genericRegister.vhd:11' bound to instance 'r0' of component 'genericRegister' [C:/Users/maitr/Documents/EENG484/regFile8x16.vhd:32]
+INFO: [Synth 8-638] synthesizing module 'genericRegister' [C:/Users/maitr/Documents/EENG484/genericRegister.vhd:18]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'genericRegister' (0#1) [C:/Users/maitr/Documents/EENG484/genericRegister.vhd:18]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'genericRegister' declared at 'C:/Users/maitr/Documents/EENG484/genericRegister.vhd:11' bound to instance 'r1' of component 'genericRegister' [C:/Users/maitr/Documents/EENG484/regFile8x16.vhd:35]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'genericRegister' declared at 'C:/Users/maitr/Documents/EENG484/genericRegister.vhd:11' bound to instance 'r2' of component 'genericRegister' [C:/Users/maitr/Documents/EENG484/regFile8x16.vhd:38]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'genericRegister' declared at 'C:/Users/maitr/Documents/EENG484/genericRegister.vhd:11' bound to instance 'r3' of component 'genericRegister' [C:/Users/maitr/Documents/EENG484/regFile8x16.vhd:41]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'genericRegister' declared at 'C:/Users/maitr/Documents/EENG484/genericRegister.vhd:11' bound to instance 'r4' of component 'genericRegister' [C:/Users/maitr/Documents/EENG484/regFile8x16.vhd:44]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'genericRegister' declared at 'C:/Users/maitr/Documents/EENG484/genericRegister.vhd:11' bound to instance 'r5' of component 'genericRegister' [C:/Users/maitr/Documents/EENG484/regFile8x16.vhd:47]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'genericRegister' declared at 'C:/Users/maitr/Documents/EENG484/genericRegister.vhd:11' bound to instance 'r6' of component 'genericRegister' [C:/Users/maitr/Documents/EENG484/regFile8x16.vhd:50]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'genericRegister' declared at 'C:/Users/maitr/Documents/EENG484/genericRegister.vhd:11' bound to instance 'r7' of component 'genericRegister' [C:/Users/maitr/Documents/EENG484/regFile8x16.vhd:53]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'genericMux8x1' declared at 'C:/Users/maitr/Documents/EENG484/genericMux8x1.vhd:9' bound to instance 'outMux' of component 'genericMux8x1' [C:/Users/maitr/Documents/EENG484/regFile8x16.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'genericMux8x1' [C:/Users/maitr/Documents/EENG484/genericMux8x1.vhd:16]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'genericMux8x1' (0#1) [C:/Users/maitr/Documents/EENG484/genericMux8x1.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'generic8RegisterFile' (0#1) [C:/Users/maitr/Documents/EENG484/regFile8x16.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'signalAcquire_Datapath' (0#1) [C:/Users/maitr/Documents/EENG484/signalAcquireDatapath.vhdl:16]
+INFO: [Synth 8-3491] module 'signalAcquire_Fsm' declared at 'C:/Users/maitr/Documents/EENG484/signalAcquireFsm.vhdl:5' bound to instance 'control_inst' of component 'signalAcquire_Fsm' [C:/Users/maitr/Documents/EENG484/signalAcquire.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'signalAcquire_Fsm' [C:/Users/maitr/Documents/EENG484/signalAcquireFsm.vhdl:12]
+INFO: [Synth 8-256] done synthesizing module 'signalAcquire_Fsm' (0#1) [C:/Users/maitr/Documents/EENG484/signalAcquireFsm.vhdl:12]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'genericCompare' declared at 'C:/Users/maitr/Documents/EENG484/genericComparator.vhd:10' bound to instance 'firstThresholdCompare_inst' of component 'genericCompare' [C:/Users/maitr/Documents/EENG484/signalAcquire.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'genericCompare__parameterized5' [C:/Users/maitr/Documents/EENG484/genericComparator.vhd:16]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'genericCompare__parameterized5' (0#1) [C:/Users/maitr/Documents/EENG484/genericComparator.vhd:16]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'genericCompare' declared at 'C:/Users/maitr/Documents/EENG484/genericComparator.vhd:10' bound to instance 'secondThresholdCompare_inst' of component 'genericCompare' [C:/Users/maitr/Documents/EENG484/signalAcquire.vhd:112]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'genericCompare' declared at 'C:/Users/maitr/Documents/EENG484/genericComparator.vhd:10' bound to instance 'thirdThresholdCompare_inst' of component 'genericCompare' [C:/Users/maitr/Documents/EENG484/signalAcquire.vhd:120]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'genericCompare' declared at 'C:/Users/maitr/Documents/EENG484/genericComparator.vhd:10' bound to instance 'fourthThresholdCompare_inst' of component 'genericCompare' [C:/Users/maitr/Documents/EENG484/signalAcquire.vhd:128]
+INFO: [Synth 8-256] done synthesizing module 'signalAcquire' (0#1) [C:/Users/maitr/Documents/EENG484/signalAcquire.vhd:19]
+WARNING: [Synth 8-3917] design signalAcquire has port an7606od[2] driven by constant 0
+WARNING: [Synth 8-3917] design signalAcquire has port an7606od[1] driven by constant 0
+WARNING: [Synth 8-3917] design signalAcquire has port an7606od[0] driven by constant 0
+WARNING: [Synth 8-7129] Port cw[10] in module signalAcquire_Datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cw[9] in module signalAcquire_Datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cw[8] in module signalAcquire_Datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cw[7] in module signalAcquire_Datapath is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1514.918 ; gain = 697.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1514.918 ; gain = 697.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1514.918 ; gain = 697.406
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1514.918 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/maitr/Documents/EENG484/signalAcquire.xdc]
+Finished Parsing XDC File [C:/Users/maitr/Documents/EENG484/signalAcquire.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/maitr/Documents/EENG484/signalAcquire.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/signalAcquire_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/signalAcquire_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1563.320 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1563.438 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1563.438 ; gain = 745.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1563.438 ; gain = 745.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1563.438 ; gain = 745.926
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'signalAcquire_Fsm'
+WARNING: [Synth 8-3936] Found unconnected internal register 'buttonActivity_reg' and it is trimmed from '3' to '1' bits. [C:/Users/maitr/Documents/EENG484/signalAcquire.vhd:49]
+WARNING: [Synth 8-3936] Found unconnected internal register 'prevButton_reg' and it is trimmed from '3' to '1' bits. [C:/Users/maitr/Documents/EENG484/signalAcquire.vhd:64]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+             reset_state |                             0000 |                             0000
+        long_delay_state |                             0001 |                             0001
+      reset_ad7606_state |                             0010 |                             0010
+  wait_for_trigger_state |                             0011 |                             0011
+       assert_conv_state |                             0100 |                             0100
+       while_busy0_state |                             0101 |                             0101
+       while_busy1_state |                             0110 |                             0110
+wait_for_valid_ad_data_state |                             0111 |                             0111
+     latch_ad_data_state |                             1000 |                             1000
+pause_between_ad_channels_state |                             1001 |                             1001
+clear_short_counter_state |                             1010 |                             1010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'signalAcquire_Fsm'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1563.438 ; gain = 745.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   24 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 8     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input   24 Bit        Muxes := 1     
+	  11 Input   11 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   8 Input    8 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	  11 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 7     
+	   2 Input    2 Bit        Muxes := 7     
+	   4 Input    1 Bit        Muxes := 3     
+	  11 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design signalAcquire has port an7606od[2] driven by constant 0
+WARNING: [Synth 8-3917] design signalAcquire has port an7606od[1] driven by constant 0
+WARNING: [Synth 8-3917] design signalAcquire has port an7606od[0] driven by constant 0
+WARNING: [Synth 8-7129] Port btn[2] in module signalAcquire is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[1] in module signalAcquire is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1594.176 ; gain = 776.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1742.086 ; gain = 924.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1772.586 ; gain = 955.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1772.586 ; gain = 955.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2028.547 ; gain = 1211.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2028.547 ; gain = 1211.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2028.547 ; gain = 1211.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2028.547 ; gain = 1211.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2028.547 ; gain = 1211.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2028.547 ; gain = 1211.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     6|
+|3     |LUT1   |     1|
+|4     |LUT3   |    27|
+|5     |LUT4   |    16|
+|6     |LUT5   |    10|
+|7     |LUT6   |    22|
+|8     |FDRE   |    58|
+|9     |IBUF   |    20|
+|10    |OBUF   |    11|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2028.547 ; gain = 1211.035
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 2028.547 ; gain = 1162.516
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2028.547 ; gain = 1211.035
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2037.695 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2041.426 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: a39e9a4b
+INFO: [Common 17-83] Releasing license: Vivado_Synthesis
+69 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2041.426 ; gain = 1431.453
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2041.426 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/maitr/Documents/EENG484/lab03/lab03.runs/synth_1/signalAcquire.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file signalAcquire_utilization_synth.rpt -pb signalAcquire_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 21 01:24:46 2026...

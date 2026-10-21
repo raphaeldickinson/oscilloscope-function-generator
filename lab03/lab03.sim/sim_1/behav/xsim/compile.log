@@ -1,0 +1,24 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/signalAcquire_Package.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/an7606.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'an7606_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/basicBuildingBlocksVhdl_package.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/decoder3x8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'decode3x8'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/genericComparator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'genericCompare'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/genericCounter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'genericCounter'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/genericMux8x1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'genericMux8x1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/genericRegister.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'genericRegister'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/regFile8x16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'generic8RegisterFile'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/signalAcquire.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'signalAcquire'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/signalAcquireDatapath.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'signalAcquire_Datapath'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/signalAcquireFsm.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'signalAcquire_Fsm'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/signalAcquire_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'signalAcquire_tb'

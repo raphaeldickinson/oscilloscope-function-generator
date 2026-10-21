@@ -1,0 +1,269 @@
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 04-sep-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Fri Sep 25 09:04:32 2026
+# Process ID         : 10996
+# Current directory  : C:/Users/maitr/Documents/EENG484/lab02/lab02.runs/synth_1
+# Command line       : vivado.exe -log scopeToHdmi.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source scopeToHdmi.tcl
+# Log file           : C:/Users/maitr/Documents/EENG484/lab02/lab02.runs/synth_1/scopeToHdmi.vds
+# Journal file       : C:/Users/maitr/Documents/EENG484/lab02/lab02.runs/synth_1\vivado.jou
+# Running On         : R-Zenbook
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 285H
+# CPU Frequency      : 3686 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 16
+# Host memory        : 33685 MB
+# Swap memory        : 3892 MB
+# Total Virtual      : 37577 MB
+# Available Virtual  : 10964 MB
+#-----------------------------------------------------------
+source scopeToHdmi.tcl -notrace
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 609.699 ; gain = 268.387
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/maitr/Documents/EENG484/RD_hdmi_ip2020'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/2026.1/Vivado/data/ip'.
+Command: synth_design -top scopeToHdmi -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Vivado_Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Designutils 20-5008] Incremental synthesis strategy default
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 44948
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1405.539 ; gain = 578.004
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'scopeToHdmi' [C:/Users/maitr/Documents/EENG484/scopeToHdmi.vhdl:19]
+INFO: [Synth 8-3491] module 'videoSignalGenerator' declared at 'C:/Users/maitr/Documents/EENG484/videoSignalGenerator.vhdl:7' bound to instance 'vsg' of component 'videoSignalGenerator' [C:/Users/maitr/Documents/EENG484/scopeToHdmi.vhdl:126]
+INFO: [Synth 8-638] synthesizing module 'videoSignalGenerator' [C:/Users/maitr/Documents/EENG484/videoSignalGenerator.vhdl:18]
+INFO: [Synth 8-256] done synthesizing module 'videoSignalGenerator' (0#1) [C:/Users/maitr/Documents/EENG484/videoSignalGenerator.vhdl:18]
+INFO: [Synth 8-3491] module 'scopeFace' declared at 'C:/Users/maitr/Documents/EENG484/scopeFace.vhd:7' bound to instance 'sf' of component 'scopeFace' [C:/Users/maitr/Documents/EENG484/scopeToHdmi.vhdl:137]
+INFO: [Synth 8-638] synthesizing module 'scopeFace' [C:/Users/maitr/Documents/EENG484/scopeFace.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'scopeFace' (0#1) [C:/Users/maitr/Documents/EENG484/scopeFace.vhd:24]
+INFO: [Synth 8-3491] module 'hdmi_tx_0' declared at 'C:/Users/maitr/Documents/EENG484/lab02/lab02.runs/synth_1/.Xil/Vivado-10996-R-Zenbook/realtime/hdmi_tx_0_stub.vhdl:6' bound to instance 'hdmi_inst' of component 'hdmi_tx_0' [C:/Users/maitr/Documents/EENG484/scopeToHdmi.vhdl:154]
+INFO: [Synth 8-638] synthesizing module 'hdmi_tx_0' [C:/Users/maitr/Documents/EENG484/lab02/lab02.runs/synth_1/.Xil/Vivado-10996-R-Zenbook/realtime/hdmi_tx_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/maitr/Documents/EENG484/lab02/lab02.runs/synth_1/.Xil/Vivado-10996-R-Zenbook/realtime/clk_wiz_0_stub.vhdl:6' bound to instance 'vc' of component 'clk_wiz_0' [C:/Users/maitr/Documents/EENG484/scopeToHdmi.vhdl:176]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/maitr/Documents/EENG484/lab02/lab02.runs/synth_1/.Xil/Vivado-10996-R-Zenbook/realtime/clk_wiz_0_stub.vhdl:19]
+INFO: [Synth 8-256] done synthesizing module 'scopeToHdmi' (0#1) [C:/Users/maitr/Documents/EENG484/scopeToHdmi.vhdl:19]
+WARNING: [Synth 8-3917] design scopeToHdmi has port hdmiOen driven by constant 1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1534.312 ; gain = 706.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1534.312 ; gain = 706.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1534.312 ; gain = 706.777
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1534.312 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/maitr/Documents/EENG484/lab02/lab02.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'vc'
+Finished Parsing XDC File [c:/Users/maitr/Documents/EENG484/lab02/lab02.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'vc'
+Parsing XDC File [c:/Users/maitr/Documents/EENG484/lab02/lab02.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc] for cell 'hdmi_inst'
+Finished Parsing XDC File [c:/Users/maitr/Documents/EENG484/lab02/lab02.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc] for cell 'hdmi_inst'
+Parsing XDC File [C:/Users/maitr/Documents/EENG484/scopeToHdmi.xdc]
+WARNING: [Constraints 18-619] A clock with name 'sysClk' already exists, overwriting the previous clock with the same name. [C:/Users/maitr/Documents/EENG484/scopeToHdmi.xdc:3]
+Finished Parsing XDC File [C:/Users/maitr/Documents/EENG484/scopeToHdmi.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/maitr/Documents/EENG484/scopeToHdmi.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/scopeToHdmi_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/scopeToHdmi_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1601.727 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1602.121 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1602.121 ; gain = 774.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1602.121 ; gain = 774.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1602.121 ; gain = 774.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1602.121 ; gain = 774.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   11 Bit       Adders := 10    
+	   3 Input   11 Bit       Adders := 4     
++---XORs : 
+	   2 Input      3 Bit         XORs := 1     
++---Registers : 
+	               11 Bit    Registers := 6     
+	                8 Bit    Registers := 3     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input   11 Bit        Muxes := 2     
+	   3 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 17    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design scopeToHdmi has port hdmiOen driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1736.074 ; gain = 908.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'sysClk'
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 1869.348 ; gain = 1041.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 1916.188 ; gain = 1088.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 1916.188 ; gain = 1088.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:06 ; elapsed = 00:01:10 . Memory (MB): peak = 2161.566 ; gain = 1334.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:06 ; elapsed = 00:01:10 . Memory (MB): peak = 2161.566 ; gain = 1334.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:07 ; elapsed = 00:01:11 . Memory (MB): peak = 2161.566 ; gain = 1334.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:07 ; elapsed = 00:01:11 . Memory (MB): peak = 2161.566 ; gain = 1334.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:07 ; elapsed = 00:01:11 . Memory (MB): peak = 2161.566 ; gain = 1334.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:07 ; elapsed = 00:01:11 . Memory (MB): peak = 2161.566 ; gain = 1334.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |hdmi_tx_0     |         1|
+|2     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |clk_wiz_0_bbox |     1|
+|2     |hdmi_tx_0_bbox |     1|
+|3     |CARRY4         |    27|
+|4     |LUT1           |    11|
+|5     |LUT2           |    89|
+|6     |LUT3           |    26|
+|7     |LUT4           |   121|
+|8     |LUT5           |    44|
+|9     |LUT6           |   167|
+|10    |FDCE           |     2|
+|11    |FDRE           |    91|
+|12    |FDSE           |    19|
+|13    |IBUF           |     4|
+|14    |OBUF           |     1|
++------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:07 ; elapsed = 00:01:11 . Memory (MB): peak = 2161.566 ; gain = 1334.031
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:49 ; elapsed = 00:01:07 . Memory (MB): peak = 2161.566 ; gain = 1266.223
+Synthesis Optimization Complete : Time (s): cpu = 00:01:07 ; elapsed = 00:01:11 . Memory (MB): peak = 2161.566 ; gain = 1334.031
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2170.656 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2174.309 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: a925ef4
+INFO: [Common 17-83] Releasing license: Vivado_Synthesis
+32 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:14 ; elapsed = 00:01:23 . Memory (MB): peak = 2174.312 ; gain = 1551.090
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2174.312 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/maitr/Documents/EENG484/lab02/lab02.runs/synth_1/scopeToHdmi.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file scopeToHdmi_utilization_synth.rpt -pb scopeToHdmi_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 25 09:06:10 2026...

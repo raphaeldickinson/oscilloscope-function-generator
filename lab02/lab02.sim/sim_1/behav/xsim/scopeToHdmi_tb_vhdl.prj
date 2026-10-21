@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../scopeToHdmi_package.vhd" \
+"../../../../../scopeFace.vhd" \
+"../../../../../scopeToHdmi.vhdl" \
+"../../../../../videoSignalGenerator.vhdl" \
+"../../../../../scopeToHdmi_tb.vhd" \
+
+# Do not sort compile order
+nosort

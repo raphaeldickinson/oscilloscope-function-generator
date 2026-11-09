@@ -109,8 +109,10 @@ CONSTANT BRAM_READ_LATENCY : NATURAL := 2;
 
 -- Trigger settings used by the top level
 CONSTANT TRIGGER_VOLT_16BIT_SIGNED : SIGNED(15 downto 0) := (others => '0');       -- 0 V
+-- The trigger time marker sits on the y-axis (the vertical center line of
+-- the face), wherever the face is: L_EDGE + 1000/2 = 640 for the centered face.
 CONSTANT TRIGGER_TIME_PIXEL : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS - 1 downto 0) :=
-    STD_LOGIC_VECTOR(to_unsigned(640, VIDEO_WIDTH_IN_BITS));                        -- center column of the face
+    STD_LOGIC_VECTOR(to_unsigned(to_integer(unsigned(L_EDGE)) + SCOPE_WIDTH / 2, VIDEO_WIDTH_IN_BITS));
 
 
 component acquireToHDMI_fsm is

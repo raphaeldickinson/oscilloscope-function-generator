@@ -27,12 +27,12 @@ end acquireToHDMI_datapath;
 
 architecture behavior of acquireToHDMI_datapath is
 
-    -- Center row of the scope face: (100 + 700) / 2 = 400  (360 if the face is centered)
+    -- Center row of the scope face: (60 + 660) / 2 = 360  (400 at the handout position)
     constant V_CENTER : NATURAL := (to_integer(unsigned(T_EDGE)) + to_integer(unsigned(B_EDGE))) / 2;
 
     -- Convert a 16-bit 2's complement sample into a row of the scope face.
     --     row = V_CENTER - (sample * SCOPE_HEIGHT) / 65536
-    -- Full scale (+32767 / -32768) lands on the top / bottom edge (100 / 700)
+    -- Full scale (+32767 / -32768) lands on the top / bottom edge (60 / 660)
     -- and 0 V lands on the center line.  The divide by 65536 is an
     -- arithmetic shift right by 16.
     function twosToPixel(sample: SIGNED(15 downto 0)) return STD_LOGIC_VECTOR is

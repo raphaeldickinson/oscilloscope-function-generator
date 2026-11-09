@@ -1,0 +1,440 @@
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 04-sep-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Mon Nov  9 00:31:24 2026
+# Process ID         : 28792
+# Current directory  : C:/Users/maitr/Documents/EENG484/lab04/lab04.runs/synth_1
+# Command line       : vivado.exe -log acquireToHDMI.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source acquireToHDMI.tcl
+# Log file           : C:/Users/maitr/Documents/EENG484/lab04/lab04.runs/synth_1/acquireToHDMI.vds
+# Journal file       : C:/Users/maitr/Documents/EENG484/lab04/lab04.runs/synth_1\vivado.jou
+# Running On         : R-Zenbook
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 285H
+# CPU Frequency      : 3686 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 16
+# Host memory        : 33685 MB
+# Swap memory        : 3355 MB
+# Total Virtual      : 37041 MB
+# Available Virtual  : 12059 MB
+#-----------------------------------------------------------
+source acquireToHDMI.tcl -notrace
+create_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 611.570 ; gain = 269.840
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/maitr/Documents/EENG484/RD_hdmi_ip2020'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/2026.1/Vivado/data/ip'.
+Command: synth_design -top acquireToHDMI -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Vivado_Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Designutils 20-5008] Incremental synthesis strategy default
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 23876
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1409.945 ; gain = 577.246
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'acquireToHDMI' [C:/Users/maitr/Documents/EENG484/acquireToHDMI.vhd:31]
+INFO: [Synth 8-3491] module 'acquireToHDMI_datapath' declared at 'C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:9' bound to instance 'datapath_inst' of component 'acquireToHDMI_datapath' [C:/Users/maitr/Documents/EENG484/acquireToHDMI.vhd:110]
+INFO: [Synth 8-638] synthesizing module 'acquireToHDMI_datapath' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:28]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'genericCounter' declared at 'C:/Users/maitr/Documents/EENG484/genericCounter.vhd:15' bound to instance 'shortDelayCounter_inst' of component 'genericCounter' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:103]
+INFO: [Synth 8-638] synthesizing module 'genericCounter' [C:/Users/maitr/Documents/EENG484/genericCounter.vhd:23]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'genericCounter' (0#1) [C:/Users/maitr/Documents/EENG484/genericCounter.vhd:23]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'genericCompare' declared at 'C:/Users/maitr/Documents/EENG484/genericComparator.vhd:10' bound to instance 'shortDelayCompare_inst' of component 'genericCompare' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:111]
+INFO: [Synth 8-638] synthesizing module 'genericCompare' [C:/Users/maitr/Documents/EENG484/genericComparator.vhd:16]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'genericCompare' (0#1) [C:/Users/maitr/Documents/EENG484/genericComparator.vhd:16]
+	Parameter N bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'genericCounter' declared at 'C:/Users/maitr/Documents/EENG484/genericCounter.vhd:15' bound to instance 'longDelayCounter_inst' of component 'genericCounter' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:123]
+INFO: [Synth 8-638] synthesizing module 'genericCounter__parameterized1' [C:/Users/maitr/Documents/EENG484/genericCounter.vhd:23]
+	Parameter N bound to: 24 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'genericCounter__parameterized1' (0#1) [C:/Users/maitr/Documents/EENG484/genericCounter.vhd:23]
+	Parameter N bound to: 24 - type: integer 
+INFO: [Synth 8-3491] module 'genericCompare' declared at 'C:/Users/maitr/Documents/EENG484/genericComparator.vhd:10' bound to instance 'longDelayCompare_inst' of component 'genericCompare' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:131]
+INFO: [Synth 8-638] synthesizing module 'genericCompare__parameterized1' [C:/Users/maitr/Documents/EENG484/genericComparator.vhd:16]
+	Parameter N bound to: 24 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'genericCompare__parameterized1' (0#1) [C:/Users/maitr/Documents/EENG484/genericComparator.vhd:16]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'genericCounter' declared at 'C:/Users/maitr/Documents/EENG484/genericCounter.vhd:15' bound to instance 'timerCounter_inst' of component 'genericCounter' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:143]
+INFO: [Synth 8-638] synthesizing module 'genericCounter__parameterized3' [C:/Users/maitr/Documents/EENG484/genericCounter.vhd:23]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'genericCounter__parameterized3' (0#1) [C:/Users/maitr/Documents/EENG484/genericCounter.vhd:23]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'genericMux4x1' declared at 'C:/Users/maitr/Documents/EENG484/genericMux4x1.vhd:9' bound to instance 'sampleRateMux_inst' of component 'genericMux4x1' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:151]
+INFO: [Synth 8-638] synthesizing module 'genericMux4x1' [C:/Users/maitr/Documents/EENG484/genericMux4x1.vhd:16]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'genericMux4x1' (0#1) [C:/Users/maitr/Documents/EENG484/genericMux4x1.vhd:16]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'genericCompare' declared at 'C:/Users/maitr/Documents/EENG484/genericComparator.vhd:10' bound to instance 'timerCompare_inst' of component 'genericCompare' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:160]
+INFO: [Synth 8-638] synthesizing module 'genericCompare__parameterized3' [C:/Users/maitr/Documents/EENG484/genericComparator.vhd:16]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'genericCompare__parameterized3' (0#1) [C:/Users/maitr/Documents/EENG484/genericComparator.vhd:16]
+	Parameter N bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'genericCounter' declared at 'C:/Users/maitr/Documents/EENG484/genericCounter.vhd:15' bound to instance 'dataStorageCounter_inst' of component 'genericCounter' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:172]
+INFO: [Synth 8-638] synthesizing module 'genericCounter__parameterized5' [C:/Users/maitr/Documents/EENG484/genericCounter.vhd:23]
+	Parameter N bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'genericCounter__parameterized5' (0#1) [C:/Users/maitr/Documents/EENG484/genericCounter.vhd:23]
+	Parameter N bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'genericCompare' declared at 'C:/Users/maitr/Documents/EENG484/genericComparator.vhd:10' bound to instance 'dataStorageCompare_inst' of component 'genericCompare' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:180]
+INFO: [Synth 8-638] synthesizing module 'genericCompare__parameterized5' [C:/Users/maitr/Documents/EENG484/genericComparator.vhd:16]
+	Parameter N bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'genericCompare__parameterized5' (0#1) [C:/Users/maitr/Documents/EENG484/genericComparator.vhd:16]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'genericRegister' declared at 'C:/Users/maitr/Documents/EENG484/genericRegister.vhd:11' bound to instance 'firstCh1Register_inst' of component 'genericRegister' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:192]
+INFO: [Synth 8-638] synthesizing module 'genericRegister' [C:/Users/maitr/Documents/EENG484/genericRegister.vhd:18]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'genericRegister' (0#1) [C:/Users/maitr/Documents/EENG484/genericRegister.vhd:18]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'genericRegister' declared at 'C:/Users/maitr/Documents/EENG484/genericRegister.vhd:11' bound to instance 'secondCh1Register_inst' of component 'genericRegister' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:200]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'genericRegister' declared at 'C:/Users/maitr/Documents/EENG484/genericRegister.vhd:11' bound to instance 'firstCh2Register_inst' of component 'genericRegister' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:208]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'genericRegister' declared at 'C:/Users/maitr/Documents/EENG484/genericRegister.vhd:11' bound to instance 'secondCh2Register_inst' of component 'genericRegister' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:216]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/maitr/Documents/EENG484/lab04/lab04.runs/synth_1/.Xil/Vivado-28792-R-Zenbook/realtime/blk_mem_gen_0_stub.vhdl:6' bound to instance 'dataStorage_ch1' of component 'blk_mem_gen_0' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:244]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/maitr/Documents/EENG484/lab04/lab04.runs/synth_1/.Xil/Vivado-28792-R-Zenbook/realtime/blk_mem_gen_0_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/maitr/Documents/EENG484/lab04/lab04.runs/synth_1/.Xil/Vivado-28792-R-Zenbook/realtime/blk_mem_gen_0_stub.vhdl:6' bound to instance 'dataStorage_ch2' of component 'blk_mem_gen_0' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:255]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/maitr/Documents/EENG484/lab04/lab04.runs/synth_1/.Xil/Vivado-28792-R-Zenbook/realtime/clk_wiz_0_stub.vhdl:6' bound to instance 'vc' of component 'clk_wiz_0' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:283]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/maitr/Documents/EENG484/lab04/lab04.runs/synth_1/.Xil/Vivado-28792-R-Zenbook/realtime/clk_wiz_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'videoSignalGenerator' declared at 'C:/Users/maitr/Documents/EENG484/videoSignalGenerator.vhdl:39' bound to instance 'vsg' of component 'videoSignalGenerator' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:297]
+INFO: [Synth 8-638] synthesizing module 'videoSignalGenerator' [C:/Users/maitr/Documents/EENG484/videoSignalGenerator.vhdl:50]
+INFO: [Synth 8-256] done synthesizing module 'videoSignalGenerator' (0#1) [C:/Users/maitr/Documents/EENG484/videoSignalGenerator.vhdl:50]
+INFO: [Synth 8-3491] module 'scopeFace' declared at 'C:/Users/maitr/Documents/EENG484/scopeFace.vhd:7' bound to instance 'sf' of component 'scopeFace' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:307]
+INFO: [Synth 8-638] synthesizing module 'scopeFace' [C:/Users/maitr/Documents/EENG484/scopeFace.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'scopeFace' (0#1) [C:/Users/maitr/Documents/EENG484/scopeFace.vhd:24]
+INFO: [Synth 8-3491] module 'hdmi_tx_0' declared at 'C:/Users/maitr/Documents/EENG484/lab04/lab04.runs/synth_1/.Xil/Vivado-28792-R-Zenbook/realtime/hdmi_tx_0_stub.vhdl:6' bound to instance 'hdmi_inst' of component 'hdmi_tx_0' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:323]
+INFO: [Synth 8-638] synthesizing module 'hdmi_tx_0' [C:/Users/maitr/Documents/EENG484/lab04/lab04.runs/synth_1/.Xil/Vivado-28792-R-Zenbook/realtime/hdmi_tx_0_stub.vhdl:36]
+INFO: [Synth 8-256] done synthesizing module 'acquireToHDMI_datapath' (0#1) [C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl:28]
+INFO: [Synth 8-3491] module 'acquireToHDMI_fsm' declared at 'C:/Users/maitr/Documents/EENG484/acquireToHDMI_fsm.vhdl:6' bound to instance 'control_inst' of component 'acquireToHDMI_fsm' [C:/Users/maitr/Documents/EENG484/acquireToHDMI.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'acquireToHDMI_fsm' [C:/Users/maitr/Documents/EENG484/acquireToHDMI_fsm.vhdl:13]
+INFO: [Synth 8-256] done synthesizing module 'acquireToHDMI_fsm' (0#1) [C:/Users/maitr/Documents/EENG484/acquireToHDMI_fsm.vhdl:13]
+INFO: [Synth 8-256] done synthesizing module 'acquireToHDMI' (0#1) [C:/Users/maitr/Documents/EENG484/acquireToHDMI.vhd:31]
+WARNING: [Synth 8-3917] design acquireToHDMI has port an7606od[2] driven by constant 0
+WARNING: [Synth 8-3917] design acquireToHDMI has port an7606od[1] driven by constant 0
+WARNING: [Synth 8-3917] design acquireToHDMI has port an7606od[0] driven by constant 0
+WARNING: [Synth 8-7129] Port sw[5] in module acquireToHDMI_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cw[17] in module acquireToHDMI_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cw[16] in module acquireToHDMI_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cw[13] in module acquireToHDMI_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cw[12] in module acquireToHDMI_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cw[11] in module acquireToHDMI_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cw[10] in module acquireToHDMI_datapath is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1543.273 ; gain = 710.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1543.273 ; gain = 710.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1543.273 ; gain = 710.574
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1543.273 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/maitr/Documents/EENG484/lab04/lab04.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'datapath_inst/dataStorage_ch1'
+Finished Parsing XDC File [c:/Users/maitr/Documents/EENG484/lab04/lab04.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'datapath_inst/dataStorage_ch1'
+Parsing XDC File [c:/Users/maitr/Documents/EENG484/lab04/lab04.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'datapath_inst/dataStorage_ch2'
+Finished Parsing XDC File [c:/Users/maitr/Documents/EENG484/lab04/lab04.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'datapath_inst/dataStorage_ch2'
+Parsing XDC File [c:/Users/maitr/Documents/EENG484/lab04/lab04.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc] for cell 'datapath_inst/hdmi_inst'
+Finished Parsing XDC File [c:/Users/maitr/Documents/EENG484/lab04/lab04.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc] for cell 'datapath_inst/hdmi_inst'
+Parsing XDC File [c:/Users/maitr/Documents/EENG484/lab04/lab04.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'datapath_inst/vc'
+Finished Parsing XDC File [c:/Users/maitr/Documents/EENG484/lab04/lab04.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'datapath_inst/vc'
+Parsing XDC File [C:/Users/maitr/Documents/EENG484/acquireToHDMI.xdc]
+WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name. [C:/Users/maitr/Documents/EENG484/acquireToHDMI.xdc:13]
+Finished Parsing XDC File [C:/Users/maitr/Documents/EENG484/acquireToHDMI.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/maitr/Documents/EENG484/acquireToHDMI.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/acquireToHDMI_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/acquireToHDMI_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1605.484 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1605.508 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'datapath_inst/dataStorage_ch1' at clock pin 'clkb' is different from the actual clock period '13.474', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'datapath_inst/dataStorage_ch2' at clock pin 'clkb' is different from the actual clock period '13.474', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1605.508 ; gain = 772.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1605.508 ; gain = 772.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1605.508 ; gain = 772.809
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'acquireToHDMI_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+             reset_state |                            00000 |                            00000
+        long_delay_state |                            00001 |                            00001
+      reset_ad7606_state |                            00010 |                            00010
+  clear_store_flag_state |                            00011 |                            00101
+  begin_conversion_state |                            00100 |                            00110
+       assert_conv_state |                            00101 |                            00111
+       while_busy0_state |                            00110 |                            01000
+       while_busy1_state |                            00111 |                            01001
+      read_low_ch1_state |                            01000 |                            01010
+    write_bram_ch1_state |                            01001 |                            01100
+ write_trigger_ch1_state |                            01010 |                            01011
+     read_high_ch1_state |                            01011 |                            01101
+       reset_short_state |                            01100 |                            01110
+      read_low_ch2_state |                            01101 |                            01111
+    write_bram_ch2_state |                            01110 |                            10001
+ write_trigger_ch2_state |                            01111 |                            10000
+     read_high_ch2_state |                            10000 |                            10010
+wait_for_next_sample_interval_state |                            10001 |                            10011
+         bram_full_state |                            10010 |                            10100
+       wait_forced_state |                            10011 |                            00011
+    set_store_flag_state |                            10100 |                            00100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'acquireToHDMI_fsm'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1605.508 ; gain = 772.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   24 Bit       Adders := 1     
+	   2 Input   19 Bit       Adders := 3     
+	   2 Input   11 Bit       Adders := 7     
+	   3 Input   11 Bit       Adders := 4     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               19 Bit    Registers := 3     
+	               16 Bit    Registers := 4     
+	               11 Bit    Registers := 4     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   4 Input   32 Bit        Muxes := 2     
+	   4 Input   24 Bit        Muxes := 1     
+	  21 Input   22 Bit        Muxes := 1     
+	   4 Input   10 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   3 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3     
+	  31 Input    5 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 5     
+	   2 Input    2 Bit        Muxes := 4     
+	   4 Input    1 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 13    
+	  21 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP ARG, operation Mode is: A*(B:0x3fda8).
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: A*(B:0x3fda8).
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: A*(B:0x3fda8).
+DSP Report: operator ARG is absorbed into DSP ARG.
+WARNING: [Synth 8-3936] Found unconnected internal register 'buttonActivity_reg' and it is trimmed from '3' to '2' bits. [C:/Users/maitr/Documents/EENG484/acquireToHDMI.vhd:76]
+WARNING: [Synth 8-3917] design acquireToHDMI has port an7606od[2] driven by constant 0
+WARNING: [Synth 8-3917] design acquireToHDMI has port an7606od[1] driven by constant 0
+WARNING: [Synth 8-3917] design acquireToHDMI has port an7606od[0] driven by constant 0
+WARNING: [Synth 8-7129] Port sw[5] in module acquireToHDMI_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cw[17] in module acquireToHDMI_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cw[16] in module acquireToHDMI_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cw[13] in module acquireToHDMI_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cw[12] in module acquireToHDMI_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cw[11] in module acquireToHDMI_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cw[10] in module acquireToHDMI_datapath is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1744.973 ; gain = 912.273
+---------------------------------------------------------------------------------
+ Sort Area is  ARG_0 : 0 0 : 495 495 : Used 1 time 0
+ Sort Area is  ARG_2 : 0 0 : 495 495 : Used 1 time 0
+ Sort Area is  ARG_3 : 0 0 : 495 495 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-----------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name            | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|acquireToHDMI_datapath | A*(B:0x3fda8) | 16     | 11     | -      | -      | 27     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acquireToHDMI_datapath | A*(B:0x3fda8) | 16     | 11     | -      | -      | 27     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acquireToHDMI_datapath | A*(B:0x3fda8) | 16     | 11     | -      | -      | 27     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-----------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'clk'
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 1922.523 ; gain = 1089.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 1966.648 ; gain = 1133.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 1966.648 ; gain = 1133.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 2214.289 ; gain = 1381.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 2214.289 ; gain = 1381.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 2214.289 ; gain = 1381.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 2214.289 ; gain = 1381.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 2214.289 ; gain = 1381.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 2214.289 ; gain = 1381.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name            | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|acquireToHDMI_datapath | A*B         | 0      | 18     | -      | -      | 27     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acquireToHDMI_datapath | A*B         | 30     | 18     | -      | -      | 27     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|acquireToHDMI_datapath | A*B         | 30     | 18     | -      | -      | 27     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |blk_mem_gen_0 |         2|
+|2     |clk_wiz_0     |         1|
+|3     |hdmi_tx_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------------+------+
+|      |Cell               |Count |
++------+-------------------+------+
+|1     |blk_mem_gen_0_bbox |     2|
+|3     |clk_wiz_0_bbox     |     1|
+|4     |hdmi_tx_0_bbox     |     1|
+|5     |CARRY4             |    58|
+|6     |DSP48E1            |     3|
+|7     |LUT1               |    13|
+|8     |LUT2               |   178|
+|9     |LUT3               |    83|
+|10    |LUT4               |   110|
+|11    |LUT5               |   105|
+|12    |LUT6               |   186|
+|13    |FDRE               |   174|
+|14    |FDSE               |    41|
+|15    |IBUF               |    20|
+|16    |OBUF               |    12|
++------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 2214.289 ; gain = 1381.590
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:52 . Memory (MB): peak = 2214.289 ; gain = 1319.355
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 2214.289 ; gain = 1381.590
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2223.449 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 61 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2227.078 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 16ae8938
+INFO: [Common 17-83] Releasing license: Vivado_Synthesis
+76 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:10 . Memory (MB): peak = 2227.121 ; gain = 1601.961
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2227.121 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/maitr/Documents/EENG484/lab04/lab04.runs/synth_1/acquireToHDMI.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file acquireToHDMI_utilization_synth.rpt -pb acquireToHDMI_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Nov  9 00:32:52 2026...

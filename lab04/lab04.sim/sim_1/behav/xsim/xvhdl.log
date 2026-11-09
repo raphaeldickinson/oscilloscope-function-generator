@@ -1,5 +1,6 @@
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/hdmi_package.vhd" into library xil_defaultlib
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/acquireToHDMI_package.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/basicBuildingBlocksVhdl_package.vhd" into library xil_defaultlib
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/acquireToHDMI.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'acquireToHDMI'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/acquireToHDMI_datapath.vhdl" into library xil_defaultlib
@@ -8,6 +9,14 @@ INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/acquir
 INFO: [VRFC 10-3107] analyzing entity 'acquireToHDMI_fsm'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/an7606.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'an7606'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/genericComparator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'genericCompare'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/genericCounter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'genericCounter'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/genericMux4x1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'genericMux4x1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/genericRegister.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'genericRegister'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/scopeFace.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'scopeFace'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/maitr/Documents/EENG484/videoSignalGenerator.vhdl" into library xil_defaultlib

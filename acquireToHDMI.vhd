@@ -57,7 +57,7 @@ begin
     an7606od <= "000";
 
     triggerVolt16bitSigned <= TRIGGER_VOLT_16BIT_SIGNED;       -- 0 V
-    triggerTimePixel <= TRIGGER_TIME_PIXEL;                     -- column 640
+    triggerTimePixel <= TRIGGER_TIME_PIXEL;                     -- on the y-axis (column 640)
 
     ------------------------------------------------------------------------------
     -- Button Process

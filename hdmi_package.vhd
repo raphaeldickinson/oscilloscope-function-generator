@@ -16,15 +16,15 @@
 --				(0,719)---------------------------------(1279,719)
 --
 --				CENTER_SCOPE_FACE (below) picks where the face sits:
---				  FALSE - (as delivered) the handout's position, which the
---				          Lab 4 reference waveforms use: the white top border
---				          is on rows 98-102, the rows in the 2.9 ms check point
---				          UL = 100, 100    UR = 1100, 100
---				          LL = 100, 700    LR = 1100, 700
---				  TRUE  - centered on the 1280 x 720 screen (the Lab 2 choice);
---				          only the colors at the 2.9 ms check point differ
+--				  TRUE  - (as delivered) centered on the 1280 x 720 screen
 --				          UL = 140, 60     UR = 1140, 60
 --				          LL = 140, 660    LR = 1140, 660
+--				  FALSE - the handout's position, which the Lab 4 reference
+--				          waveforms use: the white top border is on rows
+--				          98-102, the rows in the 2.9 ms check point.  Only the
+--				          colors at that check point differ between the two.
+--				          UL = 100, 100    UR = 1100, 100
+--				          LL = 100, 700    LR = 1100, 700
 --				Total scope display is 1000 x 600
 --				There are 10 major horiziontal divisions (100 pixels between divisions)	
 --					Each division is split into 5 parts by 4 hatch marks (20 pixels between hatches)
@@ -63,10 +63,10 @@ package hdmi_package is
     constant SCOPE_WIDTH  : NATURAL := 1000;
     constant SCOPE_HEIGHT : NATURAL := 600;
 
-    -- FALSE: face at the handout's position, so the video signals in
-    --        simulation match the Lab 4 reference waveforms exactly
-    -- TRUE:  face centered on the screen (what you had on the monitor in Lab 2)
-    constant CENTER_SCOPE_FACE : BOOLEAN := FALSE;
+    -- TRUE:  face centered on the monitor
+    -- FALSE: face at the handout's position, so the colors at the 2.9 ms
+    --        simulation check point match the Lab 4 reference exactly
+    constant CENTER_SCOPE_FACE : BOOLEAN := TRUE;
 
     -- Upper left corner of the face for each choice
     --   centered: left = (1280 - 1000) / 2 = 140, top = (720 - 600) / 2 = 60
@@ -79,13 +79,13 @@ package hdmi_package is
 
     -- Scope face outline
     constant L_EDGE : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) :=
-        std_logic_vector(to_unsigned(CENTER_SEL * CENTERED_LEFT + (1 - CENTER_SEL) * HANDOUT_LEFT, VIDEO_WIDTH_IN_BITS));  -- 100 (140 centered)
-    constant R_EDGE : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := L_EDGE + SCOPE_WIDTH;           -- 1100 (1140 centered)
+        std_logic_vector(to_unsigned(CENTER_SEL * CENTERED_LEFT + (1 - CENTER_SEL) * HANDOUT_LEFT, VIDEO_WIDTH_IN_BITS));  -- 140 (100 at the handout position)
+    constant R_EDGE : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := L_EDGE + SCOPE_WIDTH;           -- 1140 (1100)
     constant WIDTH : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := R_EDGE - L_EDGE;                 -- 1000
 
     constant T_EDGE : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) :=
-        std_logic_vector(to_unsigned(CENTER_SEL * CENTERED_TOP + (1 - CENTER_SEL) * HANDOUT_TOP, VIDEO_WIDTH_IN_BITS));    -- 100 (60 centered)
-    constant B_EDGE : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := T_EDGE + SCOPE_HEIGHT;          -- 700 (660 centered)
+        std_logic_vector(to_unsigned(CENTER_SEL * CENTERED_TOP + (1 - CENTER_SEL) * HANDOUT_TOP, VIDEO_WIDTH_IN_BITS));    -- 60 (100 at the handout position)
+    constant B_EDGE : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := T_EDGE + SCOPE_HEIGHT;          -- 660 (700)
     constant HEIGHT : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS-1 downto 0) := B_EDGE - T_EDGE;                -- 600
 	
     -- This is actually half of the width.  (Not used by scopeFace, which

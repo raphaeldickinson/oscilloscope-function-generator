@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
-use work.scopeToHdmi_package.all;       -- L_EDGE, R_EDGE, T_EDGE, B_EDGE, colors
+use work.hdmi_package.all;       -- L_EDGE, R_EDGE, T_EDGE, B_EDGE, colors
 
 entity scopeFace is
     PORT ( 	clk: in  STD_LOGIC;
@@ -99,6 +99,11 @@ architecture Behavioral of scopeFace is
     -- Rows / columns between this pixel and the tip of each trigger triangle
     signal timeMarkerDepth, voltMarkerDepth : unsigned(VIDEO_WIDTH_IN_BITS - 1 downto 0);
 
+    -- The color registers.  The initial value means they read 0 from time 0
+    -- in simulation (and power up as 0 in the FPGA) even before the first
+    -- reset clock edge.
+    signal redReg, greenReg, blueReg : STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
+
 begin
 
     ---------------------------------------------------------------------
@@ -123,42 +128,46 @@ begin
     begin
         if rising_edge (clk) then
             if resetn = '0' then
-                red <= (others => '0');
-                green <= (others => '0');
-                blue <= (others => '0');
+                redReg <= (others => '0');
+                greenReg <= (others => '0');
+                blueReg <= (others => '0');
             else
                 if ((borderH = '1') or (borderV = '1')) then
-                    red <= BORDER_R;
-                    green <= BORDER_G;
-                    blue <= BORDER_B;
+                    redReg <= BORDER_R;
+                    greenReg <= BORDER_G;
+                    blueReg <= BORDER_B;
                 elsif ((triggerTimeMarker = '1') or (triggerVoltMarker = '1')) then
-                    red <= TRIGGER_R;
-                    green <= TRIGGER_G;
-                    blue <= TRIGGER_B;
+                    redReg <= TRIGGER_R;
+                    greenReg <= TRIGGER_G;
+                    blueReg <= TRIGGER_B;
                 elsif (ch1Draw = '1') then
-                    red <= CH1_R;
-                    green <= CH1_G;
-                    blue <= CH1_B;
+                    redReg <= CH1_R;
+                    greenReg <= CH1_G;
+                    blueReg <= CH1_B;
                 elsif (ch2Draw = '1') then
-                    red <= CH2_R;
-                    green <= CH2_G;
-                    blue <= CH2_B;
+                    redReg <= CH2_R;
+                    greenReg <= CH2_G;
+                    blueReg <= CH2_B;
                 elsif ((gridH = '1') or (gridV = '1')) then
-                    red <= GRID_R;
-                    green <= GRID_G;
-                    blue <= GRID_B;
+                    redReg <= GRID_R;
+                    greenReg <= GRID_G;
+                    blueReg <= GRID_B;
                 elsif ((hatchH = '1') or (hatchV = '1')) then
-                    red <= HATCH_R;
-                    green <= HATCH_G;
-                    blue <= HATCH_B;
+                    redReg <= HATCH_R;
+                    greenReg <= HATCH_G;
+                    blueReg <= HATCH_B;
                 else
-                    red <= BACKGROUND_R;
-                    green <= BACKGROUND_G;
-                    blue <= BACKGROUND_B;
+                    redReg <= BACKGROUND_R;
+                    greenReg <= BACKGROUND_G;
+                    blueReg <= BACKGROUND_B;
                 end if;
             end if;
         end if;
     end process;
+
+    red <= redReg;
+    green <= greenReg;
+    blue <= blueReg;
 
 
     ---------------------------------------------------------------------

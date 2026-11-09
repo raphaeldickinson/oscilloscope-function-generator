@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../../Xilinx/2026.1/Vivado/data/rsb/busdef" --include "../../../../lab04.ip_user_files/ipstatic" \
+"../../../../lab04.gen/sources_1/ip/hdmi_tx_0/hdl/encode.v" \
+"../../../../lab04.gen/sources_1/ip/hdmi_tx_0/hdl/serdes_10_to_1.v" \
+"../../../../lab04.gen/sources_1/ip/hdmi_tx_0/hdl/srldelay.v" \
+"../../../../lab04.gen/sources_1/ip/hdmi_tx_0/hdl/hdmi_tx_v1_0.v" \
+"../../../../lab04.gen/sources_1/ip/hdmi_tx_0/sim/hdmi_tx_0.v" \
+"../../../../lab04.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
+"../../../../lab04.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
+"../../../../lab04.gen/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

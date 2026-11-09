@@ -1,11 +1,43 @@
+-- Purp:    Generates the 1280x720 @ 60 Hz raster timing.  Two counters sweep
+--          an imaginary beam across the screen: h_cnt steps once per pixel
+--          clock and v_cnt steps once per line.  From those two counts this
+--          module produces
+--              hs, vs      - horizontal / vertical sync pulses (active low)
+--              de          - data enable, '1' only inside the 1280x720 image
+--              pixelHorz   - column (0..1279) of the pixel being drawn now
+--              pixelVert   - row of the pixel being drawn now
+--          scopeFace uses pixelHorz/pixelVert to pick a color and the
+--          hdmi_tx_0 IP uses hs/vs/de to frame that color data.
+--
+--          Every output is registered (driven from a clocked process) so all
+--          of them change on the same clock edge.
+--
+-- Lab 4 changes (to match the Lab 4 reference simulation):
+--      * Every register has an initial value (counters 0, hs/vs '1', de '0').
+--        In Lab 4 resetn comes straight from the board, and the clocking
+--        wizard does not run videoClk while resetn is low, so the reset may
+--        never see a clock edge.  The initial values make the counters start
+--        at 0 and count from the first videoClk edge instead of being 'U'.
+--      * pixelHorz = h_cnt - 370, so it reads 0..1279 and holds 1279 during
+--        the blanking interval (the reference shows 1279 there, and 1274
+--        when h_cnt is 1645).  h_activeArea moved one clock later to match,
+--        so de still lines up with the colors for pixels 0..1279.
+--
+-- Timing reference (constants are in hdmi_package):
+--      h_cnt:   0..109 FP | 110..149 SYNC | 150..369 BP | 370..1649 ACTIVE
+--      v_cnt:   0..4   FP |   5..9   SYNC |  10..29  BP |  30..749  ACTIVE
+--      v_cnt increments when h_cnt goes 109 -> 110 (the start of h-sync).
+--
+-- Documentation: <list any assistance you received here>
+----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
-use work.scopeToHdmi_package.all;       -- VIDEO_WIDTH_IN_BITS, H_*, V_* constants
+use work.hdmi_package.all;       -- VIDEO_WIDTH_IN_BITS, H_*, V_* constants
 
 entity videoSignalGenerator is
-    PORT(	
+    PORT(
          clk: in  STD_LOGIC;
          resetn : in  STD_LOGIC;
          hs: out STD_LOGIC;
@@ -17,12 +49,24 @@ end videoSignalGenerator;
 
 architecture behavior of videoSignalGenerator is
 
+    -- First h_cnt value of the active (visible) part of a line: 110 + 40 + 220 = 370
+    constant H_ACTIVE_START : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS - 1 downto 0) := H_FP + H_SYNC + H_BP;
 
-    signal h_cnt, v_cnt : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS - 1 downto 0);
-    signal h_activeArea, v_activeArea: STD_LOGIC;
+    signal h_cnt, v_cnt : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS - 1 downto 0) := (others => '0');
+    signal h_activeArea, v_activeArea: STD_LOGIC := '0';
 
+    -- Registered outputs, with their power-up values
+    signal hsReg, vsReg : STD_LOGIC := '1';
+    signal deReg : STD_LOGIC := '0';
+    signal pixelHorzReg, pixelVertReg : STD_LOGIC_VECTOR(VIDEO_WIDTH_IN_BITS - 1 downto 0) := (others => '0');
 
 begin
+
+    hs <= hsReg;
+    vs <= vsReg;
+    de <= deReg;
+    pixelHorz <= pixelHorzReg;
+    pixelVert <= pixelVertReg;
 
     -- Register the de (active video area) signal.  A pixel is visible only when
     -- the beam is inside the active part of the line AND inside the active
@@ -32,10 +76,10 @@ begin
     process(clk)
     begin
         if rising_edge (clk) then
-            if resetn = '0' then                
-                de <= '0';
+            if resetn = '0' then
+                deReg <= '0';
             else
-                de <= h_activeArea and v_activeArea;
+                deReg <= h_activeArea and v_activeArea;
             end if;
         end if;
     end process;
@@ -66,48 +110,49 @@ begin
     begin
         if rising_edge (clk) then
             if resetn = '0' then
-                hs <= '1';
+                hsReg <= '1';
             elsif(h_cnt = H_FP - 1) then
-                hs <= '0';
+                hsReg <= '0';
             elsif(h_cnt = H_FP + H_SYNC - 1) then
-                hs <= '1';            
+                hsReg <= '1';
             end if;
         end if;
     end process;
 
 
     -- 3: Generate the pixelHorz signal that is used by
-    -- the scopeFace and other components to know which pixel on 
+    -- the scopeFace and other components to know which pixel on
     -- the screen is being drawn.
-    --    Active video starts at h_cnt = H_FP + H_SYNC + H_BP = 370.  Subtracting
-    --    one less than that (369) from h_cnt, one clock early, makes pixelHorz
-    --    read 0 at the same moment h_cnt reads 370 and h_activeArea goes high.
-    --    During the blanking interval pixelHorz simply holds its last value
-    --    (1280), which is harmless because de = '0' there.
+    --    pixelHorz <= h_cnt - 370 once h_cnt reaches 370, so it reads
+    --    0, 1, ..., 1279 across the active part of the line.  During the
+    --    blanking interval it holds its last value, 1279, which is harmless
+    --    because de = '0' there.
     process(clk)
     begin
         if rising_edge (clk) then
             if resetn = '0' then
-                pixelHorz <= (others => '0');
-            elsif(h_cnt >= H_FP + H_SYNC + H_BP - 1) then
-                pixelHorz <= h_cnt - (H_FP + H_SYNC + H_BP - 1);
+                pixelHorzReg <= (others => '0');
+            elsif(h_cnt >= H_ACTIVE_START) then
+                pixelHorzReg <= h_cnt - H_ACTIVE_START;
             end if;
         end if;
     end process;
-            
+
 
     -- 4. assert the h_activeArea signal.  This boolean is true when we are drawing pixels
-    --    Set one count before active video begins (369) so it reads '1' for
-    --    h_cnt = 370..1649, and clear it on the last count of the line (1649)
-    --    so it reads '0' when h_cnt wraps to 0.  That is exactly 1280 clocks.
+    --    pixelHorz reads 0 when h_cnt reads 371, and scopeFace's color for
+    --    that pixel comes out one clock later.  So h_activeArea is set when
+    --    h_cnt = 370 and cleared when h_cnt = 0: it reads '1' for
+    --    h_cnt = 371..1649 and 0, exactly 1280 clocks, and de (one clock
+    --    later again) is '1' for exactly the 1280 colors of pixels 0..1279.
     process(clk)
     begin
         if rising_edge (clk) then
             if resetn = '0' then
                 h_activeArea <= '0';
-            elsif(h_cnt = H_FP + H_SYNC + H_BP - 1) then
+            elsif(h_cnt = H_ACTIVE_START) then
                 h_activeArea <= '1';
-            elsif(h_cnt = H_TOTAL - 1) then
+            elsif(h_cnt = 0) then
                 h_activeArea <= '0';
             else
                 h_activeArea <= h_activeArea;
@@ -142,18 +187,18 @@ begin
     begin
         if rising_edge (clk) then
             if resetn = '0' then
-                vs <= '1';
+                vsReg <= '1';
             elsif((v_cnt = V_FP - 1) and (h_cnt = H_FP - 1)) then
-                vs <= '0';
+                vsReg <= '0';
             elsif((v_cnt = V_FP + V_SYNC - 1) and (h_cnt = H_FP - 1)) then
-                vs <= '1';            
+                vsReg <= '1';
             end if;
         end if;
     end process;
 
 
     -- 3: Generate the pixelVert signal that is used by
-    -- the scopeFace and other components to know which pixel on 
+    -- the scopeFace and other components to know which pixel on
     -- the screen is being drawn.
     --    This process (provided with the lab) updates on every clock, one clock
     --    after v_cnt changes.  With the "- 1" offset pixelVert reads 1 on the
@@ -164,9 +209,9 @@ begin
     begin
         if rising_edge (clk) then
             if resetn = '0' then
-                pixelVert <= (others => '0');
+                pixelVertReg <= (others => '0');
             elsif(v_cnt >= V_FP + V_SYNC + V_BP - 1) then
-                pixelVert <= v_cnt - (V_FP + V_SYNC + V_BP - 1);
+                pixelVertReg <= v_cnt - (V_FP + V_SYNC + V_BP - 1);
             end if;
         end if;
     end process;
